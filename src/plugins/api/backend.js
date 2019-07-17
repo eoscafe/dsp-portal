@@ -367,20 +367,4 @@ export default class API {
 
     return ctx
   }
-
-  getDspJsons () {
-    return this.feathers.restApp.service('dsp').find({
-      query: {
-        type: 'DSP_JSONS'
-      }
-    })
-  }
-
-  getDspRewards () {
-    return this.feathers.restApp.service('dsp').find({
-      query: {
-        type: 'DSP_REWARDS'
-      }
-    })
-  }
 }
