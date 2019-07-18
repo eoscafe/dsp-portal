@@ -232,6 +232,7 @@ export default class API {
         limit: 500,
         scope: '......2ke1.o4',
         table: 'accountext',
+        // eslint-disable-next-line camelcase
         ...(lower_bound && { lower_bound })
       })
 

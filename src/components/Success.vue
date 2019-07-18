@@ -6,9 +6,9 @@
       <slot>
         <p>
           Check transaction at
-          <router-link :to="`/transaction/${success.transaction_id}`">
+          <a :href="`https://bloks.iotransaction/${success.transaction_id}`">
             {{ success.transaction_id }}
-          </router-link>
+          </a>
         </p>
       </slot>
     </div>

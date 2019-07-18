@@ -133,9 +133,9 @@
 
           <div v-if="selectedPackageForStaking">
             Staking to package <b>{{ selectedPackageForStaking.package_id }}</b> for service <b>{{ selectedPackageForStaking.service }}</b> from DSP
-            <router-link :to="`/account/${selectedPackageForStaking.provider}`">
+            <a :href="`https://bloks.io/account/${selectedPackageForStaking.provider}`">
               <b>{{ selectedPackageForStaking.provider }}</b>.
-            </router-link>
+            </a>
             <br><br>
           </div>
 
@@ -261,9 +261,9 @@
                     <div v-else style="height: 28px; width: 28px; display: inline-block;vertical-align: middle;">
                     </div>
 
-                    <router-link :to="'/account/' + pkg.provider">
+                    <a :href="`https://bloks.io/account/${pkg.provider}`">
                       &nbsp; {{ pkg.provider }}
-                    </router-link>
+                    </a>
                   </td>
                   <td>{{ pkg.package_id }}</td>
                   <td>{{ pkg.service }}</td>
@@ -319,9 +319,9 @@
                     <div v-else style="height: 28px; width: 28px; display: inline-block;vertical-align: middle;">
                     </div>
 
-                    <router-link :to="'/account/' + dsp.provider">
+                    <a :href="`https://bloks.io/account/${dsp.provider}`">
                       &nbsp; {{ dsp.provider }}
-                    </router-link>
+                    </a>
                   </td>
                   <td>
                     <div class="ui unstackable items" v-if="allDspJsons[dsp.provider] && allDspJsons[dsp.provider].location && allDspJsons[dsp.provider].location.country">
@@ -388,9 +388,9 @@
                     <div v-else style="height: 28px; width: 28px; display: inline-block;vertical-align: middle;">
                     </div>
 
-                    <router-link :to="'/account/' + account.provider">
+                    <a :href="`https://bloks.io/account/${account.provider}`">
                       &nbsp; {{ account.provider }}
-                    </router-link>
+                    </a>
                   </td>
                   <td>{{ account.package }}</td>
                   <td>{{ account.service }}</td>

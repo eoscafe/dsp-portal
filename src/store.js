@@ -4,11 +4,11 @@ import Vuex from 'vuex'
 import ScatterJS from '@scatterjs/core'
 import ScatterEOS from '@scatterjs/eosjs2'
 import ScatterLynx from 'scatterjs-plugin-lynx'
-import { Api } from 'eosjs'
+import { JsonRpc, Api } from 'eosjs'
 
 Vue.use(Vuex)
 
-ScatterJS.plugins(new ScatterEOS(), new ScatterLynx())
+ScatterJS.plugins(new ScatterEOS(), new ScatterLynx({ JsonRpc, Api }))
 
 const ENDPOINT = {
   chainId: 'aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906',
